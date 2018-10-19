@@ -5,28 +5,23 @@
 #include <vector>
 #include <cstdint>
 
-#include "WrongBounds.h"
-
 class EratosthenesSieve {
 
-private:
+	private:
+		static std::vector<bool> m_sieve;
 
-	static std::vector<bool> m_sieve;
+	public:
+		EratosthenesSieve(size_t n);
+		EratosthenesSieve();
 
-public:
+		template<class T> bool isPrime(T number);
+		template<class T> std::list<T> isPrimeInRange(T begin, T end);
 
-	EratosthenesSieve(size_t n);
-	EratosthenesSieve();
+		template<> bool isPrime<float>(float number);
+		template<> bool isPrime<double>(double number);
 
-	template<class T> bool isPrime(T number);
-	template<class T> std::list<T> isPrimeInRange(T begin, T end);
-
-	template<> bool isPrime<float>(float number);
-	template<> bool isPrime<double>(double number);
-
-private:
-
-	void recalculate(size_t n);
+	private:
+		void recalculate(size_t n);
 };
 
 template<class T> std::list<T> EratosthenesSieve::isPrimeInRange(T begin,T end) {

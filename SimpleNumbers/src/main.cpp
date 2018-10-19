@@ -1,6 +1,5 @@
+#include "pch.h"
 #include <iostream>
-
-#include "EratosthenesSieve.h"
 
 int main() {
 	EratosthenesSieve sieve;

@@ -4,8 +4,8 @@
 #include <exception>
 
 class WrongBounds : public std::exception {
-	public:
 
+	public:
 		const char* what() const override;
 
 };

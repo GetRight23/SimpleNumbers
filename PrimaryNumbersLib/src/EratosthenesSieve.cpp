@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "EratosthenesSieve.h"
 
 std::vector<bool> EratosthenesSieve::m_sieve;
