@@ -1,0 +1,15 @@
+*.user
+*.pem
+*.suo
+*.sdf
+*.opensdf
+*.db
+*.db-shm
+*.db-wal
+*.orig
+*.swp
+ipch/
+GeneratedFiles/
+*.a
+.vs/
+
