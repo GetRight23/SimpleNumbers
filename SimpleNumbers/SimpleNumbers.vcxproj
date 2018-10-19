@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\EratosthenesSieve.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\WrongBounds.cpp" />
+    <ClCompile Include="src\WrongType.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\EratosthenesSieve.h" />
+    <ClInclude Include="src\WrongBounds.h" />
+    <ClInclude Include="src\WrongType.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{B56F06D2-82A1-4A01-98F5-ABFA4863F52F}</ProjectGuid>
@@ -117,9 +128,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
