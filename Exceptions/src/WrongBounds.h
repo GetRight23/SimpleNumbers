@@ -4,7 +4,6 @@
 #include <exception>
 
 class WrongBounds : public std::exception {
-
 	public:
 		const char* what() const override;
 

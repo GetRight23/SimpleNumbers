@@ -14,15 +14,9 @@
     <ClCompile Include="src\WrongBounds.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\WrongType.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\WrongBounds.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WrongType.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="include\ExceptionsInclude.h">

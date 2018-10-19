@@ -2,10 +2,11 @@
 #include <iostream>
 
 int main() {
-	EratosthenesSieve sieve;
-	std::list<int> res;
+	PrimaryNumbersHandler *handler = new EratosthenesSieve;
+	std::list<size_t> res;
+
 	try {
-		res = sieve.isPrimeInRange(100, 200);
+		res = handler->isPrimeInRange(100, 200);
 	}
 	catch (WrongBounds exception) {
 		std::cout << "Wrong bounds(line:" << __LINE__ << ") (file:"<< __FILE__ << ")" << std::endl;
@@ -15,6 +16,7 @@ int main() {
 		std::cout << var << " ";
 	}
 
+	delete handler;
 	std::cin.get();
 	return 0;
 }

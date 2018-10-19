@@ -19,12 +19,15 @@
     <ClInclude Include="src\pch.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\PrimaryNumbersHandler.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\EratosthenesSieve.cpp">
+    <ClCompile Include="src\pch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\pch.cpp">
+    <ClCompile Include="src\EratosthenesSieve.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

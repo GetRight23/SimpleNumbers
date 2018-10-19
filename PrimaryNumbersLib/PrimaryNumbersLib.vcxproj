@@ -22,6 +22,7 @@
     <ClInclude Include="include\PrimaryNumbersInclude.h" />
     <ClInclude Include="src\EratosthenesSieve.h" />
     <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\PrimaryNumbersHandler.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EratosthenesSieve.cpp" />

@@ -119,12 +119,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\WrongBounds.cpp" />
-    <ClCompile Include="src\WrongType.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ExceptionsInclude.h" />
     <ClInclude Include="src\WrongBounds.h" />
-    <ClInclude Include="src\WrongType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
