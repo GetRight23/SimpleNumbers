@@ -6,9 +6,6 @@
 #include "SieveCalculator.h"
 
 class EratosthenesSieve : public SieveCalculator {
-	private:
-		std::vector<uint8_t> m_sieve;
-
 	public:
 		EratosthenesSieve(size_t limit);
 

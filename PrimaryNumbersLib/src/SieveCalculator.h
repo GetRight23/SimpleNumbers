@@ -6,7 +6,7 @@
 
 
 class SieveCalculator : public PrimaryNumbersCalculator {
-	private:
+	protected:
 		std::vector<uint8_t> m_sieve;
 
 	public:

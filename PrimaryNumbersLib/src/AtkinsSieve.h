@@ -6,9 +6,6 @@
 #include "SieveCalculator.h"
 
 class AtkinsSieve : public SieveCalculator {
-	private:
-		std::vector<uint8_t> m_sieve;
-
 	public:
 		AtkinsSieve(size_t limit);
 
