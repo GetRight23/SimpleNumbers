@@ -1,22 +1,30 @@
 #include "pch.h"
 #include <iostream>
+#include <ctime>
+#include <memory>
 
 int main() {
-	PrimaryNumbersHandler *handler = new EratosthenesSieve;
-	std::list<size_t> res;
+	std::shared_ptr<PrimaryNumbersCalculator> calculatorDivider { new DividersEnumeration() };
+	std::shared_ptr<PrimaryNumbersCalculator> calculatorEratosthenes { new EratosthenesSieve(1000000) };
+	std::shared_ptr<PrimaryNumbersCalculator> calculatorAtkins { new AtkinsSieve(1000000) };
 
-	try {
-		res = handler->isPrimeInRange(100, 200);
-	}
-	catch (WrongBounds exception) {
-		std::cout << "Wrong bounds(line:" << __LINE__ << ") (file:"<< __FILE__ << ")" << std::endl;
-	}
-	
-	for (auto var : res) {
-		std::cout << var << " ";
-	}
+	time_t dividerStart = clock();
+	calculatorDivider->isPrimeInRange(0, 1000000);
+	time_t dividerEnd = clock();
 
-	delete handler;
+	time_t eratosthenesStart = clock();
+	calculatorEratosthenes->isPrimeInRange(0, 1000000);
+	time_t eratosthenesEnd = clock();
+
+	time_t atkinsStart = clock();
+	calculatorAtkins->isPrimeInRange(0, 1000000);
+	time_t atkinsEnd = clock();
+
+
+	std::cout << "DividersEnumeration time: " << float(dividerEnd - dividerStart) / (float)CLOCKS_PER_SEC << std::endl;
+	std::cout << "EratosthenesSieve time: " << float(eratosthenesEnd - eratosthenesStart) / (float)CLOCKS_PER_SEC << std::endl;
+	std::cout << "AtkinsSieve time: " << float(atkinsEnd - atkinsStart) / (float)CLOCKS_PER_SEC << std::endl;
+
 	std::cin.get();
 	return 0;
 }

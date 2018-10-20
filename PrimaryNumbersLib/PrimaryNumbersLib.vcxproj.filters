@@ -19,7 +19,13 @@
     <ClInclude Include="src\pch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\PrimaryNumbersHandler.h">
+    <ClInclude Include="src\AtkinsSieve.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DividersEnumeration.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PrimaryNumbersCalculator.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
@@ -28,6 +34,12 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\EratosthenesSieve.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AtkinsSieve.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DividersEnumeration.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

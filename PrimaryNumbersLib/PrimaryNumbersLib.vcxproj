@@ -20,11 +20,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\PrimaryNumbersInclude.h" />
+    <ClInclude Include="src\AtkinsSieve.h" />
+    <ClInclude Include="src\DividersEnumeration.h" />
     <ClInclude Include="src\EratosthenesSieve.h" />
     <ClInclude Include="src\pch.h" />
-    <ClInclude Include="src\PrimaryNumbersHandler.h" />
+    <ClInclude Include="src\PrimaryNumbersCalculator.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\AtkinsSieve.cpp" />
+    <ClCompile Include="src\DividersEnumeration.cpp" />
     <ClCompile Include="src\EratosthenesSieve.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -120,6 +124,7 @@
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

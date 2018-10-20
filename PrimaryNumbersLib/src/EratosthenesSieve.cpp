@@ -1,21 +1,14 @@
 #include "pch.h"
 #include "EratosthenesSieve.h"
 
-std::vector<bool> EratosthenesSieve::m_sieve;
-
-EratosthenesSieve::EratosthenesSieve() {}
-
-EratosthenesSieve::EratosthenesSieve(size_t n) {
-	recalculate(n);
+EratosthenesSieve::EratosthenesSieve(size_t limit) {
+	recalculate(limit);
 }
 
 bool EratosthenesSieve::isPrime(size_t number) {
-	if ((size_t)number > m_sieve.size()) {
-		recalculate((size_t)number);
-	}
-
 	return m_sieve[number];
 }
+
 std::list<size_t> EratosthenesSieve::isPrimeInRange(size_t begin, size_t end) {
 	std::list<size_t> result;
 
@@ -23,7 +16,7 @@ std::list<size_t> EratosthenesSieve::isPrimeInRange(size_t begin, size_t end) {
 		throw WrongBounds();
 	}
 
-	if ((size_t)end > m_sieve.size()) {
+	if (end > m_sieve.size()) {
 		recalculate(end);
 	}
 
@@ -38,17 +31,19 @@ std::list<size_t> EratosthenesSieve::isPrimeInRange(size_t begin, size_t end) {
 	return result;
 }
 
-void EratosthenesSieve::recalculate(size_t n) {
-	m_sieve.resize(n + 1, true);
-	m_sieve[0] = m_sieve[1] = false;
-	for (size_t i = 2; i <= n; ++i) {
+void EratosthenesSieve::recalculate(size_t limit) {
+	m_sieve.resize(limit + 1, true);
+	m_sieve[0] = 0;
+	m_sieve[1] = 0;
 
-		if (m_sieve[i] == true) {
+	for (size_t i = 2; i <= limit; ++i) {
 
-			if (i * i <= n) {
+		if (m_sieve[i] == 1) {
 
-				for (size_t j = i * i; j <= n; j += i) {
-					m_sieve[j] = false;
+			if (i * i <= limit) {
+
+				for (size_t j = i * i; j <= limit; j += i) {
+					m_sieve[j] = 0;
 				}
 
 			}
