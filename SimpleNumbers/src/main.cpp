@@ -1,9 +1,8 @@
 #include "pch.h"
 
-#include <iostream>
-#include <ctime>
 #include <memory>
 #include <thread>
+#include <iostream>
 
 void calculate(const std::shared_ptr<PrimaryNumbersCalculator>& calc, SharedList<size_t>& list, size_t begin, size_t end) {
 	std::list<size_t> result = calc.get()->isPrimeInRange(begin, end);
@@ -42,8 +41,6 @@ int main() {
 	for (auto value : result) {
 		std::cout << value << " ";
 	}
-
-
 
 	std::cin.get();
 	return 0;

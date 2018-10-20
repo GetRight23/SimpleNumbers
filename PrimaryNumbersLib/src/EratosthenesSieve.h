@@ -3,9 +3,9 @@
 
 #include <list>
 #include <vector>
-#include "PrimaryNumbersCalculator.h"
+#include "SieveCalculator.h"
 
-class EratosthenesSieve : public PrimaryNumbersCalculator {
+class EratosthenesSieve : public SieveCalculator {
 	private:
 		std::vector<uint8_t> m_sieve;
 
@@ -13,8 +13,7 @@ class EratosthenesSieve : public PrimaryNumbersCalculator {
 		EratosthenesSieve(size_t limit);
 
 		bool isPrime(size_t number) override;
-		std::list<size_t> isPrimeInRange(size_t begin, size_t end) override;
-		void recalculate(size_t n);
+		void recalculate(size_t n) override;
 };
 
 #endif//ERATOSTHENES_SIEVE_H

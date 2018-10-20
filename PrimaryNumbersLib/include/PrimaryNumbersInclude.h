@@ -6,5 +6,4 @@
 #include "..\src\EratosthenesSieve.h"
 #include "..\src\AtkinsSieve.h"
 
-
 #endif // PRIMARY_NUMBERS_LIB_H

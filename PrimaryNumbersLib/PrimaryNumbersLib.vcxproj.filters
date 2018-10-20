@@ -28,6 +28,9 @@
     <ClInclude Include="src\PrimaryNumbersCalculator.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\SieveCalculator.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pch.cpp">
@@ -40,6 +43,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\DividersEnumeration.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SieveCalculator.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
