@@ -6,17 +6,16 @@ AtkinsSieve::AtkinsSieve(size_t limit) {
 }
 
 void AtkinsSieve::recalculate(size_t limit) {
-	int sqr_lim;
-	int x2, y2;
-	int i, j;
-	int n;
+	size_t sqr_lim;
+	size_t x2, y2;
+	size_t i, j;
+	size_t n;
 
 	m_sieve.resize(limit + 1, false);
 	m_sieve[2] = 1;
 	m_sieve[3] = 1;
 
 	sqr_lim = (int)sqrt((long double)limit);
-
 
 	x2 = 0;
 	for (i = 1; i <= sqr_lim; i++) {

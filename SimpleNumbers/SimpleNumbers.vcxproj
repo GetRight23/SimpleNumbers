@@ -26,11 +26,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Exceptions\Exceptions.vcxproj">
-      <Project>{3cd964c6-da7d-4450-a159-5748f8ab86fa}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\PrimaryNumbersLib\PrimaryNumbersLib.vcxproj">
       <Project>{ffc18652-2305-4c6c-9a36-af57e5d63128}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.vcxproj">
+      <Project>{ae782e9d-92c7-4418-b259-d23bc8944ecd}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +95,14 @@
     <OutDir>GeneratedFiles\$(Configuration)\</OutDir>
     <IntDir>GeneratedFiles\$(Configuration)\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>GeneratedFiles\$(Configuration)\</OutDir>
+    <IntDir>GeneratedFiles\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>GeneratedFiles\$(Configuration)\</OutDir>
+    <IntDir>GeneratedFiles\$(Configuration)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -120,7 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

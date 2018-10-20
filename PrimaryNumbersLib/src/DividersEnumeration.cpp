@@ -6,7 +6,7 @@ bool DividersEnumeration::isPrime(size_t number) {
 		return false;
 	}
 
-	for (int i = 2; i * i <= number; ++i) {
+	for (size_t i = 2; i * i <= number; ++i) {
 
 		if (number % i == 0) {
 			return false;
