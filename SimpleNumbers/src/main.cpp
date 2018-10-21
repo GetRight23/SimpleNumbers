@@ -7,7 +7,8 @@ int main() {
 		PrimaryNumbersApp app;
 		app.exec();
 	}
-	catch (std::bad_alloc& ex) {
+	catch (std::bad_alloc& exBadAlloc) {
+		(void)exBadAlloc;
 		exit(-1);
 	}
 	catch (std::exception& ex) {
