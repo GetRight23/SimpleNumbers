@@ -19,6 +19,9 @@
     <ClCompile Include="src\Configuration.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\PrimaryNumbersApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\pch.h">
@@ -28,6 +31,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Configuration.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PrimaryNumbersApp.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

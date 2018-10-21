@@ -13,11 +13,11 @@
 
 class Configuration {
 	private:
-		std::vector<std::pair<int, int>> bounds;
+		std::vector<std::pair<size_t, size_t>> bounds;
 
 	public:
 		Configuration(std::string fileName = "demo.xml");
-		std::vector<std::pair<int, int>> getBounds() { return bounds; };
+		std::vector<std::pair<size_t, size_t>> getBounds() { return bounds; };
 		void writeToFile(std::list<size_t> numbers, std::string outputPath = "primes.xml");
 
 	private:

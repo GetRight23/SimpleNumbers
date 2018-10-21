@@ -30,6 +30,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="src\PrimaryNumbersApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PrimaryNumbersLib\PrimaryNumbersLib.vcxproj">
@@ -43,6 +44,7 @@
     <ClInclude Include="src\Configuration.h" />
     <ClInclude Include="src\MultithreadCalculation.h" />
     <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\PrimaryNumbersApp.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

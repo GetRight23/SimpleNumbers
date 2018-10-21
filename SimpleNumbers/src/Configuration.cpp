@@ -20,7 +20,7 @@ void Configuration::loadFile(std::string fileName) {
 		std::sregex_iterator end;
 		while (next != end) {
 			std::smatch match = *next;
-			std::pair <int, int> pr;
+			std::pair <size_t, size_t> pr;
 			size_t low = std::stoi(match[1]);
 			size_t high = std::stoi(match[2]);
 			try {
@@ -43,7 +43,7 @@ void Configuration::loadFile(std::string fileName) {
 }
 
 void Configuration::writeToFile(std::list<size_t> numbers, std::string outputPath) {
-	std::ofstream outfile(outputPath, std::ios_base::app);
+	std::ofstream outfile(outputPath, std::ios_base::out);
 	if (!outfile.is_open()) {
 		throw std::exception("File is not open");
 	}
