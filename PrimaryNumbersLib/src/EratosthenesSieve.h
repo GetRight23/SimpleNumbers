@@ -8,9 +8,8 @@
 class EratosthenesSieve : public SieveCalculator {
 	public:
 		EratosthenesSieve(size_t limit);
-
-		bool isPrime(size_t number) override;
 		void recalculate(size_t n) override;
+
 };
 
 #endif//ERATOSTHENES_SIEVE_H

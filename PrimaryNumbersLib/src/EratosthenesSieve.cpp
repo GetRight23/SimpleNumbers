@@ -5,10 +5,6 @@ EratosthenesSieve::EratosthenesSieve(size_t limit) {
 	recalculate(limit);
 }
 
-bool EratosthenesSieve::isPrime(size_t number) {
-	return m_sieve[number];
-}
-
 void EratosthenesSieve::recalculate(size_t limit) {
 	m_sieve.resize(limit + 1, true);
 	m_sieve[0] = 0;

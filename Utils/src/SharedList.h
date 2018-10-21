@@ -15,6 +15,7 @@ template<class T> class SharedList {
 
 		void addToList(const T& newValue);
 		bool listContains(const T& valueToFind);
+
 };
 
 template<class T> void SharedList<T>::addToList(const T& newValue) {

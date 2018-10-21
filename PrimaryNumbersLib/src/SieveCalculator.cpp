@@ -1,6 +1,13 @@
 #include "pch.h"
 #include "SieveCalculator.h"
 
+bool SieveCalculator::isPrime(size_t number) {
+	if (number > m_sieve.size()) {
+		recalculate(number);
+	}
+	return m_sieve[number];
+}
+
 std::list<size_t> SieveCalculator::isPrimeInRange(size_t begin, size_t end) {
 	std::list<size_t> result;
 

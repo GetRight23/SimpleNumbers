@@ -51,6 +51,3 @@ void AtkinsSieve::recalculate(size_t limit) {
 	}
 }
 
-bool AtkinsSieve::isPrime(size_t number) {
-	return m_sieve[number];
-}

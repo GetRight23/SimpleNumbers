@@ -6,6 +6,7 @@
 class WrongBounds : public std::exception {
 	public:
 		const char* what() const override;
+
 };
 
 #endif//WRONG_BOUNDS_H

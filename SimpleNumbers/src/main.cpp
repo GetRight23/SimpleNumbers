@@ -3,20 +3,25 @@
 #include <thread>
 #include <iostream>
 #include "MultithreadCalculation.h"
+#include "Configuration.h"
 
 int main() {
 	SharedList<size_t> list;
 
-	std::shared_ptr<PrimaryNumbersCalculator> calculatorDivider{ new DividersEnumeration() };
 	std::shared_ptr<PrimaryNumbersCalculator> calculatorEratosthenes{ new EratosthenesSieve(1000000) };
-	std::shared_ptr<PrimaryNumbersCalculator> calculatorAtkins{ new AtkinsSieve(1000000) };
+	//std::shared_ptr<PrimaryNumbersCalculator> calculatorDivider{ new DividersEnumeration() };	
+	//std::shared_ptr<PrimaryNumbersCalculator> calculatorAtkins{ new AtkinsSieve(1000000) };
+	//we can use different algorithms
 	
 	std::vector<std::thread> threadVector;
 	MultithreadCalculation calculator;
-		
-	threadVector.push_back(std::thread{ calculator, std::ref(calculatorDivider), std::ref(list), 100, 200 });
-	threadVector.push_back(std::thread{ calculator, std::ref(calculatorEratosthenes), std::ref(list), 0, 200 });
-	threadVector.push_back(std::thread{ calculator, std::ref(calculatorAtkins), std::ref(list), 188, 888 });
+
+	Configuration conf;
+	std::vector<std::pair<int, int>> bounds = conf.getBounds();
+
+	for (size_t i = 0; i < bounds.size(); i++) {
+		threadVector.push_back(std::thread{ calculator, std::ref(calculatorEratosthenes), std::ref(list), bounds[i].first, bounds[i].second });
+	}
 
 	for (size_t i = 0; i < threadVector.size(); i++) {
 		threadVector[i].join();
@@ -25,10 +30,7 @@ int main() {
 	std::list<size_t> result = list.getList();
 	result.sort();
 
-	for (auto value : result) {
-		std::cout << value << " ";
-	}
+	conf.writeToFile(list.getList());
 
-	std::cin.get();
 	return 0;
 }

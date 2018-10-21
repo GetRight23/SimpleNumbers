@@ -10,8 +10,10 @@ class SieveCalculator : public PrimaryNumbersCalculator {
 		std::vector<uint8_t> m_sieve;
 
 	public:
-		std::list<size_t> isPrimeInRange(size_t begin, size_t end) override;
+		bool isPrime(size_t number) override;
+		std::list<size_t> isPrimeInRange(size_t begin, size_t end) override;		
 		virtual void recalculate(size_t n) = 0;
+
 };
 
 #endif //SIEVE_CALCULATOR_H
