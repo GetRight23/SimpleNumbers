@@ -1,9 +1,7 @@
 #include "pch.h"
 #include "PrimaryNumbersApp.h"
 
-PrimaryNumbersApp::PrimaryNumbersApp() {
-
-}
+PrimaryNumbersApp::PrimaryNumbersApp() : m_configuration("demo.xml") {}
 
 void PrimaryNumbersApp::exec() {
 	//std::shared_ptr<PrimaryNumbersCalculator> calculatorDivider{ new DividersEnumeration() };	
@@ -24,5 +22,5 @@ void PrimaryNumbersApp::exec() {
 	std::list<size_t> result = m_list.getList();
 	result.sort();
 
-	m_configuration.writeToFile(m_list.getList());
+	m_configuration.writeToFile(m_list.getList(), "primes.xml");
 }

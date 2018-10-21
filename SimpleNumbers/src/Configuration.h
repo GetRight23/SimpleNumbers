@@ -16,9 +16,9 @@ class Configuration {
 		std::vector<std::pair<size_t, size_t>> bounds;
 
 	public:
-		Configuration(std::string fileName = "demo.xml");
+		Configuration(std::string fileName);
 		std::vector<std::pair<size_t, size_t>> getBounds() { return bounds; };
-		void writeToFile(std::list<size_t> numbers, std::string outputPath = "primes.xml");
+		void writeToFile(std::list<size_t> numbers, std::string outputPath);
 
 	private:
 		void loadFile(std::string fileName);
