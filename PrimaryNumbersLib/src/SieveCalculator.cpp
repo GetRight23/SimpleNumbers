@@ -12,7 +12,7 @@ std::list<size_t> SieveCalculator::isPrimeInRange(size_t begin, size_t end) {
 	std::list<size_t> result;
 
 	if (begin > end) {
-		throw WrongBounds();
+		throw WrongBoundsException();
 	}
 
 	if (end > m_sieve.size()) {

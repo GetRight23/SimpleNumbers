@@ -128,10 +128,12 @@
   <ItemGroup>
     <ClInclude Include="include\UtilsInclude.h" />
     <ClInclude Include="src\SharedList.h" />
-    <ClInclude Include="src\WrongBounds.h" />
+    <ClInclude Include="src\WrongBoundsException.h" />
+    <ClInclude Include="src\WrongConfigurationException.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\WrongBounds.cpp" />
+    <ClCompile Include="src\WrongBoundsException.cpp" />
+    <ClCompile Include="src\WrongConfigurationException.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

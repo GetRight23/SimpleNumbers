@@ -20,7 +20,7 @@ std::list<size_t> DividersEnumeration::isPrimeInRange(size_t begin, size_t end) 
 	std::list<size_t> result;
 
 	if (begin > end) {
-		throw WrongBounds();
+		throw WrongBoundsException();
 	}
 
 	for (size_t i = begin; i < end; ++i) {

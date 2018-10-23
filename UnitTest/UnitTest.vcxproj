@@ -173,6 +173,7 @@
     </ClCompile>
     <ClCompile Include="src\SharedListTest.cpp" />
     <ClCompile Include="src\WrongBoundsTest.cpp" />
+    <ClCompile Include="src\WrongConfigurationTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\pch.h" />

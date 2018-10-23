@@ -8,7 +8,7 @@ namespace UnitTest {
 
 		public:
 			TEST_METHOD(WrongBoundsWhatsTest) {
-				WrongBounds wrongBounds;	
+				WrongBoundsException wrongBounds;
 				Assert::AreEqual(wrongBounds.what(), "Lower bound(begin) is bigger than upper bound(end)");
 			}
 	};

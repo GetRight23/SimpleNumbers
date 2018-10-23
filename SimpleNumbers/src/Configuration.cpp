@@ -25,12 +25,12 @@ void Configuration::loadFile(std::string fileName) {
 			size_t high = std::stoi(match[2]);
 			try {
 				if (low > high) {
-					throw WrongBounds();
+					throw WrongBoundsException();
 				}				
 				pr = std::make_pair(std::stoi(match[1]), std::stoi(match[2]));
 				bounds.push_back(pr);	
 			}
-			catch (WrongBounds& ex) {
+			catch (WrongBoundsException& ex) {
 				std::cerr << ex.what() << std::endl;
 			}
 			next++;
@@ -40,6 +40,11 @@ void Configuration::loadFile(std::string fileName) {
 		std::cerr << ex.what() << std::endl;
 		throw;
 	}
+
+	if (bounds.size() == 0) {
+		throw WrongConfigurationException();
+	}
+
 }
 
 void Configuration::writeToFile(std::list<size_t> numbers, std::string outputPath) {

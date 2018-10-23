@@ -11,18 +11,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\WrongBounds.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="include\UtilsInclude.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="src\SharedList.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\WrongBoundsException.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WrongConfigurationException.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\WrongBounds.cpp">
+    <ClCompile Include="src\WrongBoundsException.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WrongConfigurationException.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
